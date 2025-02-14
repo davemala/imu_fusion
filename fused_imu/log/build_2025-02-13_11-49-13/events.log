@@ -1,0 +1,119 @@
+[0.000000] (-) TimerEvent: {}
+[0.000701] (fused_imu) JobQueued: {'identifier': 'fused_imu', 'dependencies': OrderedDict()}
+[0.001015] (fused_imu) JobStarted: {'identifier': 'fused_imu'}
+[0.010147] (fused_imu) JobProgress: {'identifier': 'fused_imu', 'progress': 'cmake'}
+[0.011248] (fused_imu) JobProgress: {'identifier': 'fused_imu', 'progress': 'build'}
+[0.012234] (fused_imu) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dave/Desktop/mmr_driverless/fused_imu/build/fused_imu', '--', '-j8', '-l8'], 'cwd': '/home/dave/Desktop/mmr_driverless/fused_imu/build/fused_imu', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,2899,0'), ('USER', 'dave'), ('LC_TIME', 'it_IT.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dave'), ('OLDPWD', '/home/dave/Desktop/mmr_driverless'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('SYSTEMD_EXEC_PID', '1689'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/dave/Desktop/mmr_driverless/fused_imu/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dave'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dave'), ('TERM', 'screen'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/davePC:@/tmp/.ICE-unix/1385,unix/davePC:/tmp/.ICE-unix/1385'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f39df3f1_cb83_46fc_97ed_65b4597f0c68'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dave/Desktop/mmr_driverless/fused_imu/build/fused_imu'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%3'), ('CMAKE_PREFIX_PATH', '/home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu:/opt/ros/humble')]), 'shell': False}
+[0.075731] (fused_imu) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/fused_imu_node.dir/src/main.cpp.o\x1b[0m\n'}
+[0.099961] (-) TimerEvent: {}
+[0.200213] (-) TimerEvent: {}
+[0.300623] (-) TimerEvent: {}
+[0.401090] (-) TimerEvent: {}
+[0.501430] (-) TimerEvent: {}
+[0.601747] (-) TimerEvent: {}
+[0.702184] (-) TimerEvent: {}
+[0.802456] (-) TimerEvent: {}
+[0.902769] (-) TimerEvent: {}
+[1.003046] (-) TimerEvent: {}
+[1.103421] (-) TimerEvent: {}
+[1.203749] (-) TimerEvent: {}
+[1.304071] (-) TimerEvent: {}
+[1.404544] (-) TimerEvent: {}
+[1.504786] (-) TimerEvent: {}
+[1.605064] (-) TimerEvent: {}
+[1.705414] (-) TimerEvent: {}
+[1.805764] (-) TimerEvent: {}
+[1.906093] (-) TimerEvent: {}
+[2.006432] (-) TimerEvent: {}
+[2.106960] (-) TimerEvent: {}
+[2.207271] (-) TimerEvent: {}
+[2.307623] (-) TimerEvent: {}
+[2.407996] (-) TimerEvent: {}
+[2.508407] (-) TimerEvent: {}
+[2.608906] (-) TimerEvent: {}
+[2.709216] (-) TimerEvent: {}
+[2.809548] (-) TimerEvent: {}
+[2.909860] (-) TimerEvent: {}
+[3.010202] (-) TimerEvent: {}
+[3.110603] (-) TimerEvent: {}
+[3.210952] (-) TimerEvent: {}
+[3.311292] (-) TimerEvent: {}
+[3.411573] (-) TimerEvent: {}
+[3.511871] (-) TimerEvent: {}
+[3.612205] (-) TimerEvent: {}
+[3.712546] (-) TimerEvent: {}
+[3.812872] (-) TimerEvent: {}
+[3.913165] (-) TimerEvent: {}
+[4.013473] (-) TimerEvent: {}
+[4.113774] (-) TimerEvent: {}
+[4.214084] (-) TimerEvent: {}
+[4.314364] (-) TimerEvent: {}
+[4.414688] (-) TimerEvent: {}
+[4.514987] (-) TimerEvent: {}
+[4.615294] (-) TimerEvent: {}
+[4.715608] (-) TimerEvent: {}
+[4.815994] (-) TimerEvent: {}
+[4.916295] (-) TimerEvent: {}
+[5.016598] (-) TimerEvent: {}
+[5.116954] (-) TimerEvent: {}
+[5.217235] (-) TimerEvent: {}
+[5.317534] (-) TimerEvent: {}
+[5.417838] (-) TimerEvent: {}
+[5.518124] (-) TimerEvent: {}
+[5.618392] (-) TimerEvent: {}
+[5.718741] (-) TimerEvent: {}
+[5.819046] (-) TimerEvent: {}
+[5.919359] (-) TimerEvent: {}
+[6.019656] (-) TimerEvent: {}
+[6.119992] (-) TimerEvent: {}
+[6.220473] (-) TimerEvent: {}
+[6.320794] (-) TimerEvent: {}
+[6.421089] (-) TimerEvent: {}
+[6.521384] (-) TimerEvent: {}
+[6.621679] (-) TimerEvent: {}
+[6.721974] (-) TimerEvent: {}
+[6.822232] (-) TimerEvent: {}
+[6.922546] (-) TimerEvent: {}
+[7.022859] (-) TimerEvent: {}
+[7.123156] (-) TimerEvent: {}
+[7.223400] (-) TimerEvent: {}
+[7.323742] (-) TimerEvent: {}
+[7.424055] (-) TimerEvent: {}
+[7.524460] (-) TimerEvent: {}
+[7.624754] (-) TimerEvent: {}
+[7.725060] (-) TimerEvent: {}
+[7.825591] (-) TimerEvent: {}
+[7.925985] (-) TimerEvent: {}
+[8.026382] (-) TimerEvent: {}
+[8.126736] (-) TimerEvent: {}
+[8.133763] (fused_imu) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable fused_imu_node\x1b[0m\n'}
+[8.226830] (-) TimerEvent: {}
+[8.327214] (-) TimerEvent: {}
+[8.427531] (-) TimerEvent: {}
+[8.528054] (-) TimerEvent: {}
+[8.566036] (fused_imu) StdoutLine: {'line': b'[100%] Built target fused_imu_node\n'}
+[8.576869] (fused_imu) CommandEnded: {'returncode': 0}
+[8.603447] (fused_imu) JobProgress: {'identifier': 'fused_imu', 'progress': 'install'}
+[8.612334] (fused_imu) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dave/Desktop/mmr_driverless/fused_imu/build/fused_imu'], 'cwd': '/home/dave/Desktop/mmr_driverless/fused_imu/build/fused_imu', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('TMUX', '/tmp/tmux-1000/default,2899,0'), ('USER', 'dave'), ('LC_TIME', 'it_IT.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dave'), ('OLDPWD', '/home/dave/Desktop/mmr_driverless'), ('TERM_PROGRAM_VERSION', '3.2a'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'it_IT.UTF-8'), ('SYSTEMD_EXEC_PID', '1689'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/dave/Desktop/mmr_driverless/fused_imu/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dave'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dave'), ('TERM', 'screen'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/davePC:@/tmp/.ICE-unix/1385,unix/davePC:/tmp/.ICE-unix/1385'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'it_IT.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/f39df3f1_cb83_46fc_97ed_65b4597f0c68'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'it_IT.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.90'), ('TERM_PROGRAM', 'tmux'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'it_IT.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'it_IT.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'it_IT.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dave/Desktop/mmr_driverless/fused_imu/build/fused_imu'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'it_IT.UTF-8'), ('LC_PAPER', 'it_IT.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('TMUX_PANE', '%3'), ('CMAKE_PREFIX_PATH', '/home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu:/opt/ros/humble')]), 'shell': False}
+[8.619702] (fused_imu) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[8.620250] (fused_imu) StdoutLine: {'line': b'-- Installing: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/lib/fused_imu/fused_imu_node\n'}
+[8.625327] (fused_imu) StdoutLine: {'line': b'-- Set runtime path of "/home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/lib/fused_imu/fused_imu_node" to ""\n'}
+[8.625590] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/ament_index/resource_index/package_run_dependencies/fused_imu\n'}
+[8.625901] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/ament_index/resource_index/parent_prefix_path/fused_imu\n'}
+[8.626081] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/environment/ament_prefix_path.sh\n'}
+[8.626251] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/environment/ament_prefix_path.dsv\n'}
+[8.626384] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/environment/path.sh\n'}
+[8.626558] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/environment/path.dsv\n'}
+[8.626741] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/local_setup.bash\n'}
+[8.626867] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/local_setup.sh\n'}
+[8.626981] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/local_setup.zsh\n'}
+[8.627101] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/local_setup.dsv\n'}
+[8.627230] (fused_imu) StdoutLine: {'line': b'-- Installing: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/package.dsv\n'}
+[8.627364] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/ament_index/resource_index/packages/fused_imu\n'}
+[8.627495] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/cmake/fused_imuConfig.cmake\n'}
+[8.627625] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/cmake/fused_imuConfig-version.cmake\n'}
+[8.627768] (fused_imu) StdoutLine: {'line': b'-- Up-to-date: /home/dave/Desktop/mmr_driverless/fused_imu/install/fused_imu/share/fused_imu/package.xml\n'}
+[8.628113] (-) TimerEvent: {}
+[8.628964] (fused_imu) CommandEnded: {'returncode': 0}
+[8.676816] (fused_imu) JobEnded: {'identifier': 'fused_imu', 'rc': 0}
+[8.677534] (-) EventReactorShutdown: {}

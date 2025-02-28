@@ -1,8 +1,8 @@
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/imu.hpp>
 #include <rclcpp/qos.hpp>  // Per il QoS
-#include <eigen3/Eigen/Geometry>
-#include <eigen3/Eigen/Core>
+#include <eigen3/Eigen/Dense>
+
 
 using std::placeholders::_1;
 
@@ -64,8 +64,8 @@ private:
     double sum_w = w1 + w2;
 
     // Definizione delle rotazioni
-    Eigen::Transform t;
-    t = Eigen::AngleAxis(0,035, Eigen::Vector3f::UnitY());
+    Eigen::Matrix3f t;
+    t = Eigen::AngleAxisf(0.035, Eigen::Vector3f::UnitY()).toRotationMatrix();
 
 
     // Creazione del nuovo messaggio IMU fuso

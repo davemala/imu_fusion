@@ -1,8 +1,12 @@
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/imu.hpp>
 #include <rclcpp/qos.hpp>  // Per il QoS
+#include <eigen3/Eigen/Geometry>
+#include <eigen3/Eigen/Core>
 
 using std::placeholders::_1;
+
+
 
 class ImuFusion : public rclcpp::Node
 {
@@ -55,9 +59,14 @@ private:
   void fuse_and_publish()
   {
     // Definizione dei pesi (modifica se necessario)
-    double w1 = 0.7;
-    double w2 = 0.3;
+    double w1 = 0.5;
+    double w2 = 0.5;
     double sum_w = w1 + w2;
+
+    // Definizione delle rotazioni
+    Eigen::Transform t;
+    t = Eigen::AngleAxis(0,035, Eigen::Vector3f::UnitY());
+
 
     // Creazione del nuovo messaggio IMU fuso
     sensor_msgs::msg::Imu fused_imu;
@@ -71,14 +80,23 @@ private:
     fused_imu.orientation.w = (w1 * imu1_.orientation.w + w2 * imu2_.orientation.w) / sum_w;
 
     // **2. Media pesata della velocità angolare**
-    fused_imu.angular_velocity.x = (w1 * imu1_.angular_velocity.x + w2 * imu2_.angular_velocity.x) / sum_w;
-    fused_imu.angular_velocity.y = (w1 * imu1_.angular_velocity.y + w2 * imu2_.angular_velocity.y) / sum_w;
-    fused_imu.angular_velocity.z = (w1 * imu1_.angular_velocity.z + w2 * imu2_.angular_velocity.z) / sum_w;
+    Eigen::Vector3f w1_v(imu1_.angular_velocity.x, imu1_.angular_velocity.y, imu1_.angular_velocity.z);
+    Eigen::Vector3f w2_v(imu2_.angular_velocity.x, imu2_.angular_velocity.y, imu2_.angular_velocity.z);
+    Eigen::Vector3f w1_v_rot = t * w1_v;
+    Eigen::Vector3f fused_w = (w1 * w1_v_rot + w2 * w2_v) / sum_w;
+    fused_imu.angular_velocity.x = fused_w(0);
+    fused_imu.angular_velocity.y = fused_w(1);
+    fused_imu.angular_velocity.z = fused_w(2);
 
     // **3. Media pesata dell'accelerazione lineare**
-    fused_imu.linear_acceleration.x = (w1 * imu1_.linear_acceleration.x + w2 * imu2_.linear_acceleration.x) / sum_w;
-    fused_imu.linear_acceleration.y = (w1 * imu1_.linear_acceleration.y + w2 * imu2_.linear_acceleration.y) / sum_w;
-    fused_imu.linear_acceleration.z = (w1 * imu1_.linear_acceleration.z + w2 * imu2_.linear_acceleration.z) / sum_w;
+    Eigen::Vector3f a1_v(imu1_.linear_acceleration.x, imu1_.linear_acceleration.y, imu1_.linear_acceleration.z);
+    Eigen::Vector3f a2_v(imu2_.linear_acceleration.x, imu2_.linear_acceleration.y, imu2_.linear_acceleration.z);
+    Eigen::Vector3f a1_v_rot = t * a1_v;
+    Eigen::Vector3f fused_a = (w1 * a1_v_rot + w2 * a2_v) / sum_w;
+
+    fused_imu.linear_acceleration.x = fused_a(0);
+    fused_imu.linear_acceleration.y = fused_a(1);
+    fused_imu.linear_acceleration.z = fused_a(2);
 
     // Pubblicazione del messaggio fuso
     pub_fused_imu_->publish(fused_imu);

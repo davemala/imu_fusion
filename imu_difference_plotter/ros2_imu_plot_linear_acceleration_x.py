@@ -22,7 +22,7 @@ class IMUDifferencePlotter(Node):
         # Aggiorna i topic con quelli corretti
         self.subscription_imu1 = self.create_subscription(
             Imu,
-            '/imu/fused',  # Nome corretto del primo topic
+            '/imu/data',  # Nome corretto del primo topic
             self.imu1_callback,
             qos_profile)
 
@@ -63,8 +63,8 @@ class IMUDifferencePlotter(Node):
                 self.imu1_values.append(self.imu1_data)
                 self.imu2_values.append(self.imu2_data)
                 
-                diff = self.imu1_data/2 + self.imu2_data/2
-                self.media = (self.media * 1 + diff) / 2
+                diff = self.imu1_data - self.imu2_data
+                self.media = (self.media * 9 + (self.imu1_data + self.imu2_data)/2) / 10
                 self.diff_data.append(diff)
                 self.media_values.append(self.media)
                 self.time_axis.append(self.counter)

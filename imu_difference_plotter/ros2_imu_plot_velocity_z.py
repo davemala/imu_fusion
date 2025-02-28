@@ -64,7 +64,7 @@ class IMUDifferencePlotter(Node):
                 self.imu2_values.append(self.imu2_data)
                 
                 diff = self.imu1_data - self.imu2_data
-                self.media = (self.media * 99 + diff) / 100
+                self.media = (self.media * 9 + (self.imu1_data + self.imu2_data)/2) / 10
                 self.diff_data.append(diff)
                 self.media_values.append(self.media)
                 self.time_axis.append(self.counter)

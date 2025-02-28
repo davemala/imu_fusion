@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/dave/Desktop/mmr_driverless/imu_difference_plotter
+CMAKE_SOURCE_DIR = /home/dave/Desktop/mmr_driverless/imu_fusion/imu_difference_plotter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/dave/Desktop/mmr_driverless/imu_difference_plotter/build/imu_difference_plotter
+CMAKE_BINARY_DIR = /home/dave/Desktop/mmr_driverless/imu_fusion/imu_difference_plotter/build/imu_difference_plotter
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/dave/Desktop/mmr_driverless/imu_difference_plotter/build/imu_difference_plotter && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dave/Desktop/mmr_driverless/imu_difference_plotter /home/dave/Desktop/mmr_driverless/imu_difference_plotter /home/dave/Desktop/mmr_driverless/imu_difference_plotter/build/imu_difference_plotter /home/dave/Desktop/mmr_driverless/imu_difference_plotter/build/imu_difference_plotter /home/dave/Desktop/mmr_driverless/imu_difference_plotter/build/imu_difference_plotter/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/dave/Desktop/mmr_driverless/imu_fusion/imu_difference_plotter/build/imu_difference_plotter && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dave/Desktop/mmr_driverless/imu_fusion/imu_difference_plotter /home/dave/Desktop/mmr_driverless/imu_fusion/imu_difference_plotter /home/dave/Desktop/mmr_driverless/imu_fusion/imu_difference_plotter/build/imu_difference_plotter /home/dave/Desktop/mmr_driverless/imu_fusion/imu_difference_plotter/build/imu_difference_plotter /home/dave/Desktop/mmr_driverless/imu_fusion/imu_difference_plotter/build/imu_difference_plotter/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

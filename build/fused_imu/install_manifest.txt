@@ -1,0 +1,16 @@
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/lib/fused_imu/fused_imu_node
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/ament_index/resource_index/package_run_dependencies/fused_imu
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/ament_index/resource_index/parent_prefix_path/fused_imu
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/environment/ament_prefix_path.sh
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/environment/ament_prefix_path.dsv
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/environment/path.sh
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/environment/path.dsv
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/local_setup.bash
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/local_setup.sh
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/local_setup.zsh
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/local_setup.dsv
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/package.dsv
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/ament_index/resource_index/packages/fused_imu
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/cmake/fused_imuConfig.cmake
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/cmake/fused_imuConfig-version.cmake
+/home/dave/Desktop/mmr_driverless/imu_fusion/install/fused_imu/share/fused_imu/package.xml

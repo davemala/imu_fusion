@@ -55,13 +55,13 @@ private:
   void fuse_and_publish()
   {
     // Definizione dei pesi (modifica se necessario)
-    double w1 = 0.0;
-    double w2 = 1.0;
+    double w1 = 0.7;
+    double w2 = 0.3;
     double sum_w = w1 + w2;
 
     // Creazione del nuovo messaggio IMU fuso
     sensor_msgs::msg::Imu fused_imu;
-    fused_imu.header.stamp = this->get_clock()->now();
+    fused_imu.header.stamp = imu2_.header.stamp;
     fused_imu.header.frame_id = "imu_fused";
 
     // **1. Media pesata dell'orientazione (quaternioni)**

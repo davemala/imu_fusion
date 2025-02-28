@@ -12,6 +12,9 @@ class IMUDifferencePlotter(Node):
         super().__init__('imu_difference_plotter')
 
         self.media = 0
+        self.media_imu1 = 0
+        self.media_imu2 = 0
+        self.media_diff = 0
 
         # Imposta il QoS come BEST_EFFORT per garantire compatibilità
         qos_profile = QoSProfile(
@@ -62,13 +65,23 @@ class IMUDifferencePlotter(Node):
             if self.imu1_data is not None and self.imu2_data is not None:
                 self.imu1_values.append(self.imu1_data)
                 self.imu2_values.append(self.imu2_data)
+
+                self.media_imu1 = (self.media_imu1 * self.counter + self.imu1_data ) / (self.counter +1)
+                self.media_imu2 = (self.media_imu2 * self.counter + self.imu2_data ) / (self.counter +1)
+                self.media_diff = (self.media_diff * self.counter + (self.imu1_data - self.imu2_data) ) / (self.counter +1)
                 
                 diff = self.imu1_data - self.imu2_data
-                self.media = (self.media * 99 + diff) / 100
+                #self.media = (self.media * 9 + (self.imu1_data + self.imu2_data)/2) / 10
                 self.diff_data.append(diff)
                 self.media_values.append(self.media)
                 self.time_axis.append(self.counter)
                 self.counter += 1
+
+                if self.counter % 500 == 0:
+                    print(f"IMU: {self.media_imu1}")
+                    print(f"IMU_lidar: {self.media_imu2}")
+                    print(f"Difference: {self.media_diff}")
+                    print("")
 
 
     def plot_loop(self):
@@ -76,15 +89,16 @@ class IMUDifferencePlotter(Node):
         fig, ax = plt.subplots()
         
         # Tre linee: IMU1, IMU2 e la differenza
-        line_imu1, = ax.plot([], [], 'b-', label="IMU 1")  # Blu
-        line_imu2, = ax.plot([], [], 'g-', label="IMU 2")  # Verde
+        line_imu1, = ax.plot([], [], 'b-', label="IMU Xens")  # Blu
+        line_imu2, = ax.plot([], [], 'g-', label="IMU lidar")  # Verde
         line_diff, = ax.plot([], [], 'r-', label="Difference")  # Rosso
-        line_med, = ax.plot([], [], 'y-', label="Media")
+        #line_med, = ax.plot([], [], 'y-', label="Media")
 
         ax.set_xlabel('Samples')
         ax.set_ylabel('IMU Values')
         ax.set_title('Real-time IMU Data and Difference')
         ax.legend()
+        
 
         while rclpy.ok():
             with self.lock:
@@ -97,8 +111,8 @@ class IMUDifferencePlotter(Node):
                 line_diff.set_xdata(np.array(self.time_axis))
                 line_diff.set_ydata(np.array(self.diff_data))
 
-                line_med.set_xdata(np.array(self.time_axis))
-                line_med.set_ydata(np.array(self.media_values))
+                #line_med.set_xdata(np.array(self.time_axis))
+                #line_med.set_ydata(np.array(self.media_values))
 
                 ax.relim()
                 ax.autoscale_view()
